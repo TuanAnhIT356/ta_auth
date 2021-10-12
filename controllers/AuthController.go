@@ -18,7 +18,6 @@ func Register(c *fiber.Ctx) error {
 	if err := c.BodyParser(&data);err != nil {
 		return err
 	}
-	âa
 	password,_ := bcrypt.GenerateFromPassword([]byte(data["password"]), 14)
 	user :=	models.User{
 		Name: data["name"],
