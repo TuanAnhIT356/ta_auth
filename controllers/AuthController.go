@@ -24,9 +24,6 @@ func Register(c *fiber.Ctx) error {
 		Email: data["email"],
 		Password: password,
 	}
-
-
-
 	database.DB.Create(&user)
 
 	return c.JSON(user)
