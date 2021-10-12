@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Hello 2') {
             steps {
-                telegramSend("Hello World")
+                telegramSend(message: 'Hello World', chatId: -644816500)
             }
         }
     }
